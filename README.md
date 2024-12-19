@@ -6,8 +6,8 @@ De *shacl* in deze repositoryis gebaseerd op het bestand van het Nationaal Archi
 
 ## Aanpassing
 
-De shacl van het Nationaal Archief maakt her en der de fout dat de eigenschappen van entiteiten van het type sh:PropertyShape en sh:NodeShape door elkaar gebruikt worden.
-Zo bevat het originele shacl de volgende regels:
+De *shacl* van het Nationaal Archief maakt her en der de fout dat de eigenschappen van entiteiten van het type `sh:PropertyShape` en `sh:NodeShape` door elkaar gebruikt worden.
+Zo bevat het originele *shacl* de volgende regels:
 
 ```` 
 mdtosh:ObjectShape
@@ -27,7 +27,7 @@ mdtosh:IdentificatieShape
     sh:description "Gegevens waarmee het object geïdentificeerd kan worden." .
 ````
 
-De gecorrigeerde shacl heeft de volgende regels:
+De gecorrigeerde *shacl* trekt de onjuiste `NodeShape` uitelkaar en maakt de volgende regels:
 
 ````
 mdtosh:ObjectShape
