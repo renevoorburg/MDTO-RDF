@@ -25,11 +25,11 @@ mdtosh:IdentificatieShape
     sh:minCount 1 ;
     sh:name "Identificatie" ;
     sh:description "Gegevens waarmee het object geïdentificeerd kan worden." .
-```
+````
 
 De gecorrigeerde shacl heeft de volgende regels:
 
-```
+````
 mdtosh:ObjectShape
     a sh:NodeShape ;
     sh:targetClass mdto:Object ;
@@ -49,7 +49,7 @@ mdtosh:IdentificatieShape
     sh:class mdto:IdentificatieGegevens;
     sh:name "Identificatie" ;
     sh:description "Gegevens waarmee het object geïdentificeerd kan worden." .
-```
+````
 
 
 
