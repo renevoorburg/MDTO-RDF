@@ -27,7 +27,7 @@ mdtosh:IdentificatieShape
     sh:description "Gegevens waarmee het object geïdentificeerd kan worden." .
 ````
 
-De gecorrigeerde *shacl* trekt al de onjuiste `NodeShape`s op de volgende wijze uitelkaar:
+De gecorrigeerde *shacl* trekt al de onjuiste `NodeShape` 's op de volgende wijze uitelkaar:
 
 ````
 mdtosh:ObjectShape
