@@ -1,13 +1,13 @@
 # MDTO-RDF
 
-De [shacl voor de validatie van MTDO-bestanden in RDF-formaat](https://www.nationaalarchief.nl/archiveren/mdto/rdf-ontologie) zoals die gepublcieerd wordt door het Nationaal Archief, voldoet niet geheel aan de shacl-standaard. Sommige validatie-tools werken desondanks (bijvoorbeeld [shacl-validator](https://github.com/ontola/shacl-validator) of [EU ITB Shacl Validator](https://www.itb.ec.europa.eu/shacl/any/upload)) maar de shacl van het Nationaal Archief werkt helaas niet met de python module [pyshacl]](https://github.com/RDFLib/pySHACL).
+De [shacl voor de validatie van MTDO-bestanden in RDF-formaat](https://www.nationaalarchief.nl/archiveren/mdto/rdf-ontologie) zoals die gepublcieerd wordt door het Nationaal Archief, voldoet niet geheel aan de shacl-standaard. Sommige validatie-tools werken desondanks (bijvoorbeeld [shacl-validator](https://github.com/ontola/shacl-validator) of [EU ITB Shacl Validator](https://www.itb.ec.europa.eu/shacl/any/upload)) maar de shacl van het Nationaal Archief werkt helaas niet met de python module [pyshacl](https://github.com/RDFLib/pySHACL).
 
 De *shacl* in deze repositoryis gebaseerd op het bestand van het Nationaal Archief, maar corrigeert de fout die maakt dat **pyshacl** het niet accepteert.
 
 ## Aanpassing
 
 De *shacl* van het Nationaal Archief maakt her en der de fout dat de eigenschappen van entiteiten van het type `sh:PropertyShape` en `sh:NodeShape` door elkaar gebruikt worden.
-Zo bevat het originele *shacl* de volgende regels:
+Zo bevat het originele *shacl* bijvoorbeeld de volgende regels:
 
 ```` 
 mdtosh:ObjectShape
@@ -27,7 +27,7 @@ mdtosh:IdentificatieShape
     sh:description "Gegevens waarmee het object geïdentificeerd kan worden." .
 ````
 
-De gecorrigeerde *shacl* trekt de onjuiste `NodeShape` uitelkaar en maakt de volgende regels:
+De gecorrigeerde *shacl* trekt al de onjuiste `NodeShape`s op de volgende wijze uitelkaar:
 
 ````
 mdtosh:ObjectShape
