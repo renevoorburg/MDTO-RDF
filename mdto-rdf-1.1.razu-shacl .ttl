@@ -107,7 +107,7 @@ mdtosh:AggregatieniveauShape
 
 mdtosh:ClassificatiePropertyShape
     a sh:PropertyShape ;
-    sh:path mdto:aggregatieniveau ;
+    sh:path mdto:classificatie ;
     sh:minCount 0 ;
     sh:node mdtosh:ClassificatieShape .
 
