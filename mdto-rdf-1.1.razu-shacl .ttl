@@ -364,6 +364,7 @@ mdtosh:BeperkingGebruikShape
 mdtosh:BestandShape
     a sh:NodeShape ;
     sh:targetClass mdto:Bestand ;
+    rdfs:subClassOf mdtosh:ObjectShape ;
     sh:name "BestandShape" ;
     sh:property mdtosh:IdentificatiePropertyShape ;
     sh:property mdtosh:NaamPropertyShape ;
