@@ -43,8 +43,8 @@ mdtosh:NaamPropertyShape
 
 mdtosh:InformatieobjectShape
     a sh:NodeShape ;
-    rdfs:subClassOf mdtosh:ObjectShape ;
-    sh:targetClass mdto:Informatieobject ;
+    sh:node mdto:ObjectShape ;
+    sh:targetClass mdtosh:Informatieobject ;
     sh:name "InformatieobjectShape" ;
     sh:description "Een op zichzelf staand geheel van gegevens met een eigen identiteit." ;
     sh:property mdtosh:IdentificatiePropertyShape ;
@@ -364,7 +364,7 @@ mdtosh:BeperkingGebruikShape
 mdtosh:BestandShape
     a sh:NodeShape ;
     sh:targetClass mdto:Bestand ;
-    rdfs:subClassOf mdtosh:ObjectShape ;
+    sh:node mdtosh:ObjectShape ;
     sh:name "BestandShape" ;
     sh:property mdtosh:IdentificatiePropertyShape ;
     sh:property mdtosh:NaamPropertyShape ;
