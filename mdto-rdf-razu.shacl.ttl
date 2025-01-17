@@ -27,6 +27,7 @@ mdtosh:IdentificatiePropertyShape
 
 mdtosh:IdentificatieShape
     a sh:NodeShape ; 
+    sh:targetClass mdto:IdentificatieGegevens;
     sh:class mdto:IdentificatieGegevens;
     sh:name "Identificatie" ;
     sh:description "Gegevens waarmee het object geïdentificeerd kan worden." .
@@ -44,7 +45,7 @@ mdtosh:NaamPropertyShape
 mdtosh:InformatieobjectShape
     a sh:NodeShape ;
     sh:node mdto:ObjectShape ;
-    sh:targetClass mdtosh:Informatieobject ;
+    sh:targetClass mdto:Informatieobject ;
     sh:name "InformatieobjectShape" ;
     sh:description "Een op zichzelf staand geheel van gegevens met een eigen identiteit." ;
     sh:property mdtosh:IdentificatiePropertyShape ;
@@ -101,6 +102,7 @@ mdtosh:AggregatieniveauPropertyShape
 
 mdtosh:AggregatieniveauShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Aggregatieniveau" ;
     sh:description "Het aggregatieniveau van het informatieobject." .
@@ -113,6 +115,7 @@ mdtosh:ClassificatiePropertyShape
 
 mdtosh:ClassificatieShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Classificatie" ;
     sh:description "Ordening van informatieobjecten in een logisch verband, zoals vastgelegd in een classificatieschema." .
@@ -143,6 +146,7 @@ mdtosh:RaadpleeglocatiePropertyShape
 
 mdtosh:RaadpleeglocatieShape
     a sh:NodeShape ;
+    sh:targetClass mdto:RaadpleeglocatieGegevens ;
     sh:class mdto:RaadpleeglocatieGegevens ;
     sh:name "Raadpleeglocatie" ;
     sh:description "Actuele verwijzing naar de locatie waar het informatieobject ter inzage ligt." .
@@ -155,6 +159,7 @@ mdtosh:DekkingInTijdPropertyShape
 
 mdtosh:DekkingInTijdShape
     a sh:NodeShape ;
+    sh:targetClass mdto:DekkingInTijdGegevens ;
     sh:class mdto:DekkingInTijdGegevens ;
     sh:name "Dekking in tijd" ;
     sh:description "Een tijdstip of de periode waarop de inhoud van het informatieobject betrekking heeft." .
@@ -195,6 +200,7 @@ mdtosh:EventPropertyShape
 
 mdtosh:EventShape
     a sh:NodeShape ;
+    sh:targetClass mdto:EventGegevens ;
     sh:class mdto:EventGegevens ;
     sh:name "Event" ;
     sh:description "Gebeurtenis die heeft plaatsgevonden met betrekking tot het ontstaan, wijzigen, vernietigen en beheer van het informatieobject en de bijbehorende metagegevens." .
@@ -208,6 +214,7 @@ mdtosh:WaarderingPropertyShape
 
 mdtosh:WaarderingShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Waardering" ;
     sh:description "De waardering van het informatieobject volgens de van toepassing zijnde en vastgestelde selectielijst." .
@@ -221,6 +228,7 @@ mdtosh:BewaartermijnPropertyShape
 
 mdtosh:BewaartermijnShape
     a sh:NodeShape ;
+    sh:targetClass mdto:TermijnGegevens ;
     sh:class mdto:TermijnGegevens ;
     sh:name "Bewaartermijn" ;
     sh:description "Termijn waarin het informatieobject bewaard dient te worden, zoals gespecificeerd in de van toepassing zijnde en vastgestelde selectielijst." .
@@ -234,6 +242,7 @@ mdtosh:InformatiecategoriePropertyShape
 
 mdtosh:InformatiecategorieShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Informatiecategorie" ;
     sh:description "De informatiecategorie uit een vastgestelde selectielijst of hotspotlijst waar de bewaartermijn op gebaseerd is." .
@@ -246,6 +255,7 @@ mdtosh:IsOnderdeelVanPropertyShape
 
 mdtosh:IsOnderdeelVanShape
     a sh:NodeShape ;
+    sh:targetClass mdto:Informatieobject ;
     sh:class mdto:Informatieobject ;
     sh:name "Is onderdeel van" ;
     sh:description "De direct bovenliggende aggregatie waar dit informatieobject onderdeel van is." .
@@ -258,6 +268,7 @@ mdtosh:BevatOnderdeelPropertyShape
 
 mdtosh:BevatOnderdeelShape
     a sh:NodeShape ;
+    sh:targetClass mdto:Informatieobject ;
     sh:class mdto:Informatieobject ;
     sh:name "Bevat onderdeel" ;
     sh:description "Een informatieobject dat direct onderliggend onderdeel is van deze aggregatie." .
@@ -270,6 +281,7 @@ mdtosh:HeeftRepresentatiePropertyShape
 
 mdtosh:HeeftRepresentatieShape
     a sh:NodeShape ;
+    sh:targetClass mdto:Bestand ;
     sh:class mdto:Bestand ;
     sh:name "Heeft representatie" ;
     sh:description "Verwijzing naar het bestand dat een (deel van een) representatie van het informatieobject is." .
@@ -282,6 +294,7 @@ mdtosh:AanvullendeMetagegevensPropertyShape
 
 mdtosh:AanvullendeMetagegevensShape
     a sh:NodeShape ;
+    sh:targetClass mdto:Bestand ;
     sh:class mdto:Bestand ;
     sh:name "Aanvullende metagegevens" ;
     sh:description "Verwijzing naar een bestand dat aanvullende (domeinspecifieke) metagegevens over het  informatieobject bevat." .
@@ -294,6 +307,7 @@ mdtosh:GerelateerdInformatieobjectPropertyShape
 
 mdtosh:GerelateerdInformatieobjectShape
     a sh:NodeShape ;
+    sh:targetClass mdto:GerelateerdInformatieobjectGegevens ;
     sh:class mdto:GerelateerdInformatieobjectGegevens ;
     sh:name "Gerelateerd informatieobject" ;
     sh:description "Relatie met een ander informatieobject dat relevant is binnen de context van het ontstaan, gebruik en/of beheer van dit informatieobject." .
@@ -325,6 +339,7 @@ mdtosh:BetrokkenePropertyShape
 
 mdtosh:BetrokkeneShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BetrokkeneGegevens ;
     sh:class mdto:BetrokkeneGegevens ;
     sh:name "Betrokkene" ;
     sh:description "Persoon of organisatie die relevant is binnen de context van het ontstaan en gebruik van dit informatieobject , anders dan de archiefvormer." .
@@ -357,6 +372,7 @@ mdtosh:BeperkingGebruikPropertyShape
 
 mdtosh:BeperkingGebruikShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BeperkingGebruikGegevens ;
     sh:class mdto:BeperkingGebruikGegevens ;
     sh:name "Beperking gebruik" ;
     sh:description "Een beperking die gesteld is aan het gebruik van het informatieobject." .
@@ -392,6 +408,7 @@ mdtosh:BestandsformaatPropertyShape
 
 mdtosh:BestandsformaatShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Bestandsformaat" ;
     sh:description "De manier waarop de informatie in een computerbestand binair gecodeerd is." .
@@ -404,6 +421,7 @@ mdtosh:ChecksumPropertyShape
 
 mdtosh:ChecksumShape
     a sh:NodeShape ;
+    sh:targetClass mdto:ChecksumGegevens ;
     sh:class mdto:ChecksumGegevens ;
     sh:name "Checksum" ;
     sh:description "Gegevens om te bepalen of het bestand beschadigd of gewijzigd is." .
@@ -426,6 +444,7 @@ mdtosh:IsRepresentatieVanPropertyShape
 
 mdtosh:IsRepresentatieVanShape
     a sh:NodeShape ;
+    sh:targetClass mdto:Informatieobject ;
     sh:class mdto:Informatieobject ;
     sh:name "Is representatie van" ;
     sh:description "Verwijzing naar het informatieobject waarvan het bestand een (deel van de) fysieke representatie van is." .
@@ -433,6 +452,7 @@ mdtosh:IsRepresentatieVanShape
 mdtosh:IdentificatieGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:IdentificatieGegevens ;
+    sh:class mdto:IdentificatieGegevens ;
     sh:property mdtosh:IdentificatieKenmerkPropertyShape ;
     sh:property mdtosh:IdentificatieBronPropertyShape .
 
@@ -461,6 +481,7 @@ mdtosh:IdentificatieKenmerkPropertyShape
 mdtosh:VerwijzingGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:VerwijzingGegevens ;
+    sh:class mdto:VerwijzingGegevens ;
     sh:property mdtosh:VerwijzingNaamPropertyShape ;
     sh:property mdtosh:VerwijzingIdentificatiePropertyShape .
 
@@ -482,6 +503,7 @@ mdtosh:VerwijzingIdentificatiePropertyShape
 
 mdtosh:VerwijzingIdentificatieShape
     a sh:NodeShape ;
+    sh:targetClass mdto:IdentificatieGegevens ;
     sh:class mdto:IdentificatieGegevens ;
     sh:name "Identificatie" ;
     sh:description "De identificatie van het object waarnaar verwezen wordt." .
@@ -489,6 +511,7 @@ mdtosh:VerwijzingIdentificatieShape
 mdtosh:BegripGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:BegripGegevens ;
+    sh:class mdto:BegripGegevens ;
     sh:property mdtosh:BegripLabelPropertyShape ;
     sh:property mdtosh:BegripCodePropertyShape ;
     sh:property mdtosh:BegripBegrippenlijstPropertyShape .
@@ -521,12 +544,8 @@ mdtosh:BegripBegrippenlijstPropertyShape
 mdtosh:BegripBegrippenlijstShape
     a sh:NodeShape ;
     sh:or (
-        [
-            sh:class mdto:VerwijzingGegevens ;  
-        ]
-        [   
-            sh:class mdto:Informatieobject ;
-        ]
+        [ sh:class mdto:VerwijzingGegevens ]
+        [ sh:class mdto:Informatieobject ]
     ) ;
     sh:name "Begrippenlijst" ;
     sh:description "Een beschrijving van de begrippen die voor een bepaald toepassingsgebied gebruikt worden is opgesomd. Samen met hun betekenis en hun onderlinge relaties." .
@@ -534,6 +553,7 @@ mdtosh:BegripBegrippenlijstShape
 mdtosh:DekkingInTijdGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:DekkingInTijdGegevens ;
+    sh:class mdto:DekkingInTijdGegevens ;
     sh:property mdtosh:DekkingInTijdTypePropertyShape ;
     sh:property mdtosh:DekkingInTijdBeginDatumPropertyShape ;
     sh:property mdtosh:DekkingInTijdEindDatumPropertyShape .
@@ -547,6 +567,7 @@ mdtosh:DekkingInTijdTypePropertyShape
 
 mdtosh:DekkingInTijdTypeShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Type";
     sh:description "Nadere typering van het tijdstip of de periode waar de inhoud van het informatieobject betrekking op heeft." .
@@ -592,6 +613,7 @@ mdtosh:DekkingInTijdEindDatumPropertyShape
 mdtosh:EventGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:EventGegevens ;
+    sh:class mdto:EventGegevens ;
     sh:property mdtosh:EventTypePropertyShape ;
     sh:property mdtosh:EventTijdPropertyShape ;
     sh:property mdtosh:EventVerantwoordelijkeActorPropertyShape ;
@@ -606,6 +628,7 @@ mdtosh:EventTypePropertyShape
 
 mdtosh:EventTypeShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Type" ;
     sh:description "Aanduiding van het type event." .
@@ -664,6 +687,7 @@ mdtosh:EventResultaatPropertyShape
 mdtosh:GerelateerdInformatieobjectGegevensShape
     a sh:NodeShape;
     sh:targetClass mdto:GerelateerdInformatieobjectGegevens ;
+    sh:class mdto:GerelateerdInformatieobjectGegevens ;
     sh:property mdtosh:GerelateerdInformatieobjectVerwijzingPropertyShape ;
     sh:property mdtosh:GerelateerdInformatieobjectTypeRelatiePropertyShape .
 
@@ -696,6 +720,7 @@ mdtosh:GerelateerdInformatieobjectTypeRelatiePropertyShape
 
 mdtosh:GerelateerdInformatieobjectTypeRelatieShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Type relatie" ;
     sh:description "Typering van de relatie met het andere informatieobject." .
@@ -703,6 +728,7 @@ mdtosh:GerelateerdInformatieobjectTypeRelatieShape
 mdtosh:BetrokkeneGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:BetrokkeneGegevens ;
+    sh:class mdto:BetrokkeneGegevens ;
     sh:property mdtosh:BetrokkeneTypeRelatiePropertyShape ;
     sh:property mdtosh:BetrokkeneActorPropertyShape .
 
@@ -715,6 +741,7 @@ mdtosh:BetrokkeneTypeRelatiePropertyShape
 
 mdtosh:BetrokkeneTypeRelatieShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Type relatie" ;
     sh:description "Typering van de betrokkenheid van de actor bij het informatieobject." .
@@ -742,6 +769,7 @@ mdtosh:BetrokkeneActorShape
 mdtosh:BeperkingGebruikGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:BeperkingGebruikGegevens ;
+    sh:class mdto:BeperkingGebruikGegevens ;
     sh:property mdtosh:BeperkingGebruikTypePropertyShape ;
     sh:property mdtosh:BeperkingGebruikNadereBeschrijvingPropertyShape ;
     sh:property mdtosh:BeperkingGebruikDocumentatiePropertyShape ;
@@ -756,6 +784,7 @@ mdtosh:BeperkingGebruikTypePropertyShape
 
 mdtosh:BeperkingGebruikTypeShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Type" ;
     sh:description "Typering van de beperking. Op grond waarvan bepaald kan worden wie toegang heeft tot het informatieobject en welke voorwaarden op het gebruik van toepassing zijn." .
@@ -796,6 +825,7 @@ mdtosh:BeperkingGebruikTermijnPropertyShape
 
 mdtosh:BeperkingGebruikTermijnShape
     a sh:NodeShape ;
+    sh:targetClass mdto:TermijnGegevens ;
     sh:class mdto:TermijnGegevens ;
     sh:name "Termijn" ;
     sh:description "De termijn waarbinnen de beperking op het gebruik van toepassing is." .
@@ -803,6 +833,7 @@ mdtosh:BeperkingGebruikTermijnShape
 mdtosh:TermijnGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:TermijnGegevens ;
+    sh:class mdto:TermijnGegevens ;
     sh:property mdtosh:TermijnTriggerStartLooptijdPropertyShape ;
     sh:property mdtosh:TermijnStartdatumLooptijdPropertyShape ;
     sh:property mdtosh:TermijnLooptijdPropertyShape ;
@@ -816,6 +847,7 @@ mdtosh:TermijnTriggerStartLooptijdPropertyShape
 
 mdtosh:TermijnTriggerStartLooptijdShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Trigger start looptijd" ;
     sh:description "Gebeurtenis waarna de looptijd van de termijn start." .
@@ -841,12 +873,15 @@ mdtosh:TermijnEinddatumPropertyShape
     sh:path mdto:termijnEinddatum ;
     sh:or (
         [ 
+            sh:nodeKind sh:Literal ;
             sh:datatype xsd:date ;
         ]
         [   
+            sh:nodeKind sh:Literal ;
             sh:datatype xsd:gYearMonth ;
         ]
         [
+            sh:nodeKind sh:Literal ;
             sh:datatype xsd:gYear ;
         ]
     ) ;
@@ -857,6 +892,7 @@ mdtosh:TermijnEinddatumPropertyShape
 mdtosh:ChecksumGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:ChecksumGegevens ;
+    sh:class mdto:ChecksumGegevens ;
     sh:property mdtosh:ChecksumAlgoritmePropertyShape ;
     sh:property mdtosh:ChecksumWaardePropertyShape ;
     sh:property mdtosh:ChecksumDatumPropertyShape .
@@ -870,6 +906,7 @@ mdtosh:ChecksumAlgoritmePropertyShape
 
 mdtosh:ChecksumAlgoritmeShape
     a sh:NodeShape ;
+    sh:targetClass mdto:BegripGegevens ;
     sh:class mdto:BegripGegevens ;
     sh:name "Algoritme" ;
     sh:description "Naam van het algoritme dat is gebruikt om de checksum te maken." .
@@ -895,6 +932,7 @@ mdtosh:ChecksumDatumPropertyShape
 mdtosh:RaadpleeglocatieGegevensShape
     a sh:NodeShape ;
     sh:targetClass mdto:RaadpleeglocatieGegevens ;
+    sh:class mdto:RaadpleeglocatieGegevens ;
     sh:property mdtosh:RaadpleeglocatieFysiekPropertyShape ;
     sh:property mdtosh:RaadpleeglocatieOnlinePropertyShape .
 
@@ -924,4 +962,3 @@ mdtosh:RaadpleeglocatieOnlinePropertyShape
     sh:minCount 0;
     sh:name "Online raadpleeglocatie" ;
     sh:description "Actuele verwijzing naar een online raadpleeglocatie die het informatieobject en de bijbehorende metagegevens weergeeft." .
-    

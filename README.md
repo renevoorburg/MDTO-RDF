@@ -1,6 +1,6 @@
 # MDTO-RDF
 
-De [shacl voor de validatie van MTDO-bestanden in RDF-formaat](https://www.nationaalarchief.nl/archiveren/mdto/rdf-ontologie) zoals die gepublcieerd wordt door het Nationaal Archief, voldoet niet geheel aan de shacl-standaard. Sommige validatie-tools werken desondanks (bijvoorbeeld [shacl-validator](https://github.com/ontola/shacl-validator) of [EU ITB Shacl Validator](https://www.itb.ec.europa.eu/shacl/any/upload)) maar de shacl van het Nationaal Archief werkt helaas niet met de python module [pyshacl](https://github.com/RDFLib/pySHACL).
+De [shacl voor de validatie van MTDO-bestanden in RDF-formaat](https://www.nationaalarchief.nl/archiveren/mdto/rdf-ontologie) zoals die gepublcieerd wordt door het Nationaal Archief, voldoet aan de shacl-standaard. Sommige validatie-tools zijn desondanks te gebruiken, maar mogelijk met onvolledige validatie (bijvoorbeeld [shacl-validator](https://github.com/ontola/shacl-validator) of [EU ITB Shacl Validator](https://www.itb.ec.europa.eu/shacl/any/upload)). De shacl van het Nationaal Archief werkt niet met de python module [pyshacl](https://github.com/RDFLib/pySHACL).
 
 De *shacl* in deze repositoryis gebaseerd op het bestand van het Nationaal Archief, maar corrigeert de fout die maakt dat **pyshacl** het niet accepteert.
 
@@ -51,5 +51,10 @@ mdtosh:IdentificatieShape
     sh:description "Gegevens waarmee het object geïdentificeerd kan worden." .
 ````
 
+### Validator 
+
+Deze repository biedt een op **pyshacl** gebaseerd validatiescript aan. Dit script kan gebruikt worden om de *shacl* te valideren. Het script staat in de map `scripts` en kan met `python scripts/validate.py <path-to-rdf-file>` worden uitgevoerd.
+
+Ter validatie van de shacl zelf kan een PyTest testsuite gebruikt worden. De bestande van deze testsuite staan in de map `tests` en kunnen met `pytest` worden uitgevoerd.
 
 

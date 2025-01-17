@@ -1,0 +1,215 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mdto: <http://www.nationaalarchief.nl/mdto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://www.example.com/> .
+
+ex:InformatieobjectArchiefstuk001
+    a mdto:Informatieobject ;
+    mdto:identificatie ex:Identificatie009 ;
+    mdto:naam "Verlenen kapvergunning Hooigracht 21 Den Haag";
+    mdto:aggregatieniveau ex:Begrip016;
+    mdto:omschrijving "Verlenen van een kapvergunning Hooigracht 21 Den Haag april 1985" ;
+    mdto:raadpleeglocatie ex:Raadpleeglocatie003 ;
+    mdto:dekkingInRuimte ex:Verwijzing009 ;
+    mdto:taal "nl"^^xsd:language ;
+    mdto:event ex:Event005 ;
+    mdto:waardering ex:Begrip012 ;
+    mdto:bewaartermijn ex:Termijn003 ;
+    mdto:informatiecategorie ex:Begrip006 ;
+    mdto:isOnderdeelVan ex:InformatieobjectDossier001 ;
+    mdto:heeftRepresentatie ex:Bestand001 ;
+    mdto:archiefvormer ex:Actor001 ;
+    mdto:betrokkene ex:Betrokkene001 ;
+    mdto:activiteit ex:Verwijzing007 ;
+    mdto:beperkingGebruik ex:BeperkingGebruik001 .
+
+ex:InformatieobjectDossier001
+    a mdto:Informatieobject ;
+    mdto:waardering ex:Begrip012 ;
+    mdto:archiefvormer ex:Actor001 ;
+    mdto:identificatie ex:Identificatie005 ;
+    mdto:naam "Verlenen kapvergunning Hooigracht 21 Den Haag" ;
+    mdto:bevatOnderdeel ex:InformatieobjectArchiefstuk001 .
+
+ex:Identificatie005
+    a mdto:IdentificatieGegevens ;
+    mdto:identificatieKenmerk "Informatieobject-9f1a-5a35262f429d" ;
+    mdto:identificatieBron "Proza (OCW-DMS)" .
+
+ex:Bestand001
+    a mdto:Bestand ;
+    mdto:identificatie ex:Identificatie010 ;
+    mdto:naam "19880405KapvergunningHooigracht.pdf" ;
+    mdto:omvang 2638472 ;
+    mdto:bestandsformaat ex:Begrip017 ;
+    mdto:checksum ex:Checksum001 ;
+    mdto:URLBestand "https://kia.pleio.nl/file/download/55815288/0090101KapvergunningHooigracht.pdf"^^xsd:anyURI ;
+    mdto:isRepresentatieVan ex:InformatieobjectArchiefstuk001 .
+
+ex:Identificatie009
+    a mdto:IdentificatieGegevens ;
+    mdto:identificatieKenmerk "Informatieobject-4661a-5a3526fh654e" ;
+    mdto:identificatieBron "Proza (OCW-DMS)" .
+
+ex:Raadpleeglocatie003
+    a mdto:RaadpleeglocatieGegevens;
+    mdto:raadpleeglocatieFysiek ex:Verwijzing012 ;
+    mdto:raadpleeglocatieOnline "https://archief.nl/toegangen/2.13.999/Informatieobject-4661a-5a3526fh654ee"^^xsd:anyURI .
+
+ex:Verwijzing012
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "Nationaal Archief Emmen" .
+
+ex:Verwijzing009 
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "Hooigracht 21, Den Haag" .
+
+ex:Event005
+    a mdto:EventGegevens ;
+    mdto:eventType ex:Begrip009 ;
+    mdto:eventTijd "1987-07-21T21:20:00"^^xsd:dateTime ;
+    mdto:eventVerantwoordelijkeActor ex:Verwijzing010 .
+
+ex:Verwijzing010
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "Gemeente Den Haag afdeling vergunningen" ;
+    mdto:verwijzingIdentificatie ex:Identificatie007 .
+
+ex:Identificatie007
+    a mdto:IdentificatieGegevens ;
+    mdto:identificatieKenmerk "WH2360HHHJ" ;
+    mdto:identificatieBron "ZZ-TRIMADDIN" .
+
+ex:Begrip012 
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Tijdelijk te bewaren" ;
+    mdto:begripCode "V" ;
+    mdto:begripBegrippenlijst ex:Verwijzing001 .
+
+ex:Verwijzing001
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "MDTO begrippenlijsten versie 0.9" .
+
+ex:Termijn003
+    a mdto:TermijnGegevens ;
+    mdto:termijnTriggerStartLooptijd ex:Begrip013;
+    mdto:termijnStartdatumLooptijd "1988-04-05"^^xsd:date ;
+    mdto:termijnLooptijd "P75Y"^^xsd:duration ;
+    mdto:termijnEinddatum "2063-04-05"^^xsd:date .
+
+ex:Begrip006
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Toestemming verlenen" ;
+    mdto:begripCode "11.1" ;
+    mdto:begripBegrippenlijst ex:Verwijzing006 .
+
+ex:Verwijzing006
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "Selectielijst Gemeenten en intergemeentelijke organen 2020" .
+
+ex:Actor001
+    a mdto:Actor ;
+    mdto:identificatie ex:Identificatie011 ;
+    mdto:naam "'s-Gravenhage" .
+
+ex:Identificatie011 
+    a mdto:IdentificatieGegevens ;
+    mdto:identificatieKenmerk "'s-Gravenhage" ;
+    mdto:identificatieBron "OWMS" .
+
+ex:Verwijzing007
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "Behandelen verhunningsaanvragen" ;
+    mdto:verwijzingIdentificatie ex:Identificatie004 .
+
+ex:Identificatie004
+    a mdto:IdentificatieGegevens ;
+    mdto:identificatieKenmerk "821002193-20201" ;
+    mdto:identificatieBron "GEMTE" .
+
+ex:BeperkingGebruik001
+    a mdto:BeperkingGebruikGegevens ;
+    mdto:beperkingGebruikType ex:Begrip015 ;
+    mdto:beperkingGebruikNadereBeschrijving "Toestemming verleend voor onbepaalde tijd onder een CC-BY licentie, door T. de Haan op 23 november 2017" ;
+    mdto:beperkingGebruikTermijn ex:Termijn002 .
+
+ex:Begrip015
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Auteurswet" ;
+    mdto:begripBegrippenlijst ex:Verwijzing008 .
+
+ex:Verwijzing008
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "Gemeente Den Haag zaaksysteem begrippenlijst" .
+
+ex:Termijn002 
+    a mdto:TermijnGegevens ;
+    mdto:termijnTriggerStartLooptijd ex:Begrip013 ;
+    mdto:termijnLooptijd "P70Y"^^xsd:duration ;
+    mdto:termijnEinddatum "2058-04-05"^^xsd:date .
+
+ex:Begrip013
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Sluiting dossier" ;
+    mdto:begripBegrippenlijst ex:Verwijzing008 .
+
+ex:Begrip009
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Creatie" ;
+    mdto:begripBegrippenlijst ex:Verwijzing010 .
+
+ex:Begrip017
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Acrobat PDF/A - Portable Document Format" ;
+    mdto:begripCode "fmt/95" ;
+    mdto:begripBegrippenlijst ex:Verwijzing013 .
+
+ex:Verwijzing013
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "PRONOM-register" .
+
+ex:Identificatie010
+    a mdto:IdentificatieGegevens ;
+    mdto:identificatieKenmerk "Bestand-34c5-4379-9f1a-5c37872e316d" ;
+    mdto:identificatieBron "Proza (OCW-DMS)" .
+
+ex:Checksum001
+    a mdto:ChecksumGegevens ;
+    mdto:checksumAlgoritme ex:Begrip018 ;
+    mdto:checksumWaarde "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad" ;
+    mdto:checksumDatum "1988-04-05T23:51:18"^^xsd:dateTime .
+
+ex:Begrip018
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "SHA-256" ;
+    mdto:begripBegrippenlijst ex:Verwijzing001 .
+
+ex:Betrokkene001
+    a mdto:BetrokkeneGegevens ;
+    mdto:betrokkeneTypeRelatie ex:Begrip014 ;
+    mdto:betrokkeneActor ex:Verwijzing011 .
+
+ex:Begrip014
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Aanvrager" ;
+    mdto:begripBegrippenlijst ex:Verwijzing008 .
+    # Verwijzingen008 onbreekt maar dit valideert wel?
+
+ex:Verwijzing011
+    a mdto:VerwijzingGegevens ;
+    mdto:verwijzingNaam "Cafe 't Hoekje" ;
+    mdto:verwijzingIdentificatie ex:Identificatie008 . 
+
+ex:Identificatie008
+    a mdto:IdentificatieGegevens ;
+    mdto:identificatieKenmerk "20404451" ;
+    mdto:identificatieBron "KVK" .
+
+ex:Begrip016
+    a mdto:BegripGegevens ;
+    mdto:begripLabel "Archiefstuk" ;
+    mdto:begripBegrippenlijst ex:Verwijzing001 .
